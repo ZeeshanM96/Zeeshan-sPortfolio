@@ -2,7 +2,7 @@
 document.getElementById('contactForm').addEventListener('submit', function(event) {
     event.preventDefault();
     const formData = new FormData(this);
-    fetch('http://ec2-13-53-132-1.eu-north-1.compute.amazonaws.com:5000/send_email', {
+    fetch('https://ec2-13-53-132-1.eu-north-1.compute.amazonaws.com:5000/send_email', {
     method: 'POST',
     body: formData
     })
