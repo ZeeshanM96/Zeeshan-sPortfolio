@@ -2,9 +2,9 @@
 document.getElementById('contactForm').addEventListener('submit', function(event) {
     event.preventDefault();
     const formData = new FormData(this);
-    fetch('http://127.0.0.1:5000/send_email', {
-        method: 'POST',
-        body: formData
+    fetch('http://ec2-instance-public-ip-or-dns:5000/send_email', {
+    method: 'POST',
+    body: formData
     })
     .then(response => response.json())
     .then(data => {
